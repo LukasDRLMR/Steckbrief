@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+<<<<<<< HEAD
+	background-color: white;
+=======
+	background-color: #D8D9FF;
+>>>>>>> bbe3a32cec1b181c4ac8c3bce076fba65bcc12d7
+}
+h1 {
+	text-align: center;
+}
+
+<<<<<<< HEAD
+img {
+	width: 100%;
+	max-width: 200px;
+}
+=======
+>>>>>>> bbe3a32cec1b181c4ac8c3bce076fba65bcc12d7
+
+button {
+	position: relative;
+	margin: 1em;
+	padding: 1em;
+	width: 200px;
+	background: #020058;
+	cursor: pointer;
+	color: white;
+	border: 1px solid white;
+	border-radius: 15px;
+	
+	
+}
