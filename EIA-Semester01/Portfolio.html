@@ -8,19 +8,58 @@
 </head>
 
 <body>
-	<h1>Fotografie</h1>
-	<a href="../../Steckbrief/EIA-Semester01/steckbrief.htm"<button>Zurück</button></a>
-		<img src="Images/IMG_3564.JPG" alt="">
-		<img src="Images/DSCF4990.JPG" alt="">
-		<img src="Images/IMG_4136.JPG" alt="">
-		<img src="Images/IMG_3565.JPG" alt="">
-		<img src="Images/IMG_3566.JPG" alt="">		
-	<h2>Fotografie</h2>
-	<br>
-	<h2>Videografie</h2>
-		<video src="Animation/clip1.mp4" autoplay loop>Ihr Browser kann dieses Video nicht wiedergeben.</video>
-		<video src="Animation/clip2.mp4" autoplay loop>Ihr Browser kann dieses Video nicht wiedergeben.</video>
-		<video src="Animation/clip3.mp4" autoplay loop>Ihr Browser kann dieses Video nicht wiedergeben.</video>
-		<video src="Animation/clip4.mp4" autoplay loop>Ihr Browser kann dieses Video nicht wiedergeben.</video>
+	<div class="grid-container">
+		<div class="Nav">
+			<nav>
+				<ul>
+					<li><a href="startseite.html">Startseite</a></li>
+					<li><a href="Portfolio.html">Portfolio</a></li>
+					<li><a href="About_Me.html">About Me</a></li>
+					<li><a href="Contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="Side-Area">
+			<img id="crop-img-side-area" src="Images/IMG_3564.JPG" alt="">
+			</br>
+			<img id="crop-img-side-area" style="margin-top: 20px;" src="Images/oliur-TIMCZe9JghI-unsplash.jpg" alt="">
+		</div>
+
+		<div class="Main">
+			<h1>Portfolio</h1>
+			<p style="text-align: center; color:darkgrey">Fotografie</p>
+			<br>
+			<table>
+				<tr>
+					<td><img src="Images/DSCF4990.JPG" alt=""></td>
+					<td><img src="Images/IMG_4136.JPG" alt=""></td>
+				</tr>
+				<tr>
+					<td><img src="Images/IMG_3565.JPG" alt=""></td>
+					<td><img src="Images/IMG_3566.JPG" alt=""></td>
+				</tr>
+			</table>		
+
+			<p style="text-align: center; color:darkgrey; margin-top: 40px">Logos</p>
+			<table>
+				<tr align="center">
+					<td><img style="max-width: 200px; height: auto;" src="Grafik/Binas-Stoffwindeln.svg"></td>
+					<td><img src="Grafik/Korbinan-Langer.svg"></td>
+				</tr>
+				<tr align="center">
+					<td><img src="Grafik/Logo-BuFaTa19_Tübingen.svg"></td>
+					<td><img src="Grafik/Neo Verde-Logo.svg"></td>
+				</tr>
+			</table>
+
+		</div>	
+	</div>
 </body>
 </html>
+
+<!--					<object data="Grafik/Binas-Stoffwindeln.svg" type="image/svg+xml"></object>
+					<object data="Grafik/Korbinan-Langer.svg" type="image/svg+xml"></object>
+					<object data="Grafik/Logo-BuFaTa19_Tübingen.svg" type="image/svg+xml"></object>
+					<object data="Grafik/Neo Verde-Logo.svg" type="image/svg+xml"></object>
+				-->
