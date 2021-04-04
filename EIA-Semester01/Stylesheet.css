@@ -47,7 +47,6 @@ nav ul {
 }
 
 nav li {
-	color: white;
 	display: inline;
 }
 
@@ -64,7 +63,7 @@ nav li a:hover {
 	color: black;
 }
 
-ul.Nav li a.active {
+ul Nav li a.active {
 	background-color: white;
 	color: black;
 }
@@ -175,17 +174,28 @@ button {
 	width: 200px;
 	background: #020058;
 	cursor: pointer;
-	color: white;
-	border: 1px solid white;
+	border: none;
 	border-radius: 15px;
+	text-align: center;
 }
 
 button a {
 	text-decoration: none;
+	color: white;
+	padding: 20px 60px;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+}
+
+button a:hover {
+	color: black;
 }
 
 #crop-img-side-area {
-	height: 52%;
+	height: 35%;
 	width: 95%;
 	object-fit: cover;
 	object-position: top center;
@@ -193,6 +203,6 @@ button a {
 
 @media screen {
 	#crop-img-side-area {
-		height: 52%;
+		height: 35%;
 	}
 }
