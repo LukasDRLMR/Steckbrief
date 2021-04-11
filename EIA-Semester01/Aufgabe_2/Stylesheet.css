@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	background: #eee;
+	margin: 0px;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+	'Nav Nav Nav'
+	'Side-Area Main Side-Main'
+	'Side-Area Main Side-Main'
+	'Footer Footer Footer'
+}
+
+.Nav { grid-area: Nav; }
+.Side-Area { grid-area: Side-Area; }‚
+.Footer { grid-area: Footer; }
+.Main { grid-area: Main; }
+.Side-Main { grid-area: Side-Main; }
+.Footer { grid-area: Footer; }
+
+Main {
+	margin-top: 2em;
+}
+
+/* Navigation */
+
+nav {
+	background-color: #020058;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	top: 0;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #020058;
+	margin: 0px 30px 0px 0px;
+}
+
+nav li {
+	display: inline;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 30px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: white;
+	color: black;
+}
+
+ul Nav li a.active {
+	background-color: white;
+	color: black;
+}
+
+/* Timeline */
+
+.Timeline {
+	position: relative;
+	max-height: 1000px;
+}
+
+/* Linie */
+.Timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: black;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+}
+
+.Container {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+/* Timeline-Circle */
+.Container::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 59px;
+	background-color: white;
+  	border: 8px solid #020058;
+  	top: 15px;
+  	border-radius: 50%;
+  	z-index: 1;
+}
+
+.left {
+	left: -80px;
+}
+
+.right {
+	left: 50%;
+}
+
+.right::after {
+	left: -15px;
+}
+
+.left::after {
+	right: -21px;
+}
+
+/* Pfeile an Containern */
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
+.biographie {
+	padding: 20px 20px;
+	background-color: white;
+	position: relative;
+	border-radius: 8px;
+}
+
+/*---------------------------------------------------------------*/
+
+h1 {
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	max-width: 300px;
+}
+
+button {
+	position: relative;
+	margin: 1em;
+	padding: 1em;
+	width: 200px;
+	background: #020058;
+	cursor: pointer;
+	border: none;
+	border-radius: 15px;
+	text-align: center;
+}
+
+button a {
+	text-decoration: none;
+	color: white;
+	padding: 20px 60px;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+}
+
+button a:hover {
+	color: black;
+}
+
+#crop-img-side-area {
+	height: 35%;
+	width: 95%;
+	object-fit: cover;
+	object-position: top center;
+}
+
+@media screen {
+	#crop-img-side-area {
+		height: 35%;
+	}
+}

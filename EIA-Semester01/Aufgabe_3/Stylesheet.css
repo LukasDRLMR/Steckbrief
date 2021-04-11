@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-image: url(Images/bg.png);
+    background-repeat: repeat-x repeat-y;
+    display: grid;
+}
+
+/* --------- Navigation -------- */
+
+nav {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 10%;
+    border-radius: 0em 0em 0.3em 0.3em;
+    z-index: 99;
+    width: 300px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 5px 5px -30px;
+    list-style-type: none;
+}
+
+
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-right: 1px solid white;
+    padding: 0px 10px 0px 10px;
+}
+
+nav li:last-child a {
+    border-right: none;
+}
+
+nav li a:hover {
+    color :rgb(190, 60, 20);
+}
+
+#Nav-active {
+    color: rgb(190, 60, 20);
+}
+
+/* --------- Header -------- */
+
+.Header {
+    background-color: rgb(190, 60, 20);
+    position: relative;
+    height: 50em;
+    width: 50em;
+    border-radius: 50%;
+    top: -20em;
+    margin: auto;
+    z-index: 1;
+}
+
+#Headline {
+    text-align: center;
+    color: white;
+    font-size: 1400%; 
+    font-weight: bold;
+    letter-spacing: -0.1em;
+    margin-top: 320px;
+    background-image: url(Images/bg.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -190px;
+    color: white;
+    font-size: 60px;
+    background-image: url(Images/bg.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    color: rgb(190, 60, 20);
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.Header-Text {
+    color: white;
+    font-size: 9pt;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -10em;
+}
+
+.Social-Media {
+    position: absolute;
+    margin-left: 50%;
+    opacity: 50%;
+}
+
+.Social-Media:hover {
+    opacity: 100%;
+}
+
+/* --------- Content -------- */
+
+
+.Content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+/* --------- Footer -------- */
+
+
+.Footer {
+    background-color: black;
+    width: auto;
+    height: 50px;
+    margin-top: 10em;
+}
+
+/* --------- Timeline -------- */
+
+
+.Timeline {
+	position: relative;
+	max-height: 1000px;
+}
+
+/* --------- Linie -------- */
+.Timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: black;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+}
+
+.Container {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+/* --------- Timeline-Circle -------- */
+.Container::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 59px;
+	background-color: white;
+  	border: 8px solid rgb(190, 60, 20);
+  	top: 15px;
+  	border-radius: 50%;
+  	z-index: 1;
+}
+
+.left {
+	left: -80px;
+}
+
+.right {
+	left: 50%;
+}
+
+.right::after {
+	left: -15px;
+}
+
+.left::after {
+	right: -21px;
+}
+
+/* --------- Pfiele an Containern -------- */
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
+.biographie {
+	padding: 20px 20px;
+	background-color: white;
+	position: relative;
+	border-radius: 8px;
+}
+
+
+/* --------- Eingabefelder -------- */
+
+input {
+    background-color: rgb(204, 204, 204);
+    border: 0;
+    padding: 3px 5px 3px 15px;
+    width: 30em;
+    height: 3em;
+    margin: 0.5em 0em 0.5em 0em;
+    color: white;
+}
+
+input[type=submit] {
+    font-size: 1.5em;
+    width: 5em;
+    height: auto;
+    padding: 5px 8px 5px 8px;
+}
+
+textarea {
+    background-color: rgb(204, 204, 204);
+    border: 0;
+    padding: 3px 5px 3px 15px;
+    width: 50em;
+    height: 5em;
+    margin: 0.5em 0em 0.5em 0em;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    font-size: 2em;
+}
+
+
+
+.Text-field {
+    background-color: rgb(204, 204, 204);
+    width: 50em;
+    overflow: auto;
+}

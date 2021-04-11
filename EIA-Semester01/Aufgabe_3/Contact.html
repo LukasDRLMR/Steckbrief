@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="Stylesheet.css">
+<title>Contact</title>
+</head>
+
+<body>
+    <div class="Nav">
+        <nav>
+            <ul>
+                <li><a href="Index.html">Portfolio</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html"id="Nav-active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="Header">
+        <h1 id="Headline">portfolio</h1>
+        <h2>loremipsum</h2>
+            <p class="Header-Text">Lorem Ipsum dolor sit amet, consetetur sadispscing elitr, </br>
+                    sed diam nonumy eirmod tempor invidunt ut labore et </br>
+                    dolore magna aliquyam erat, sed diam voliptua. At vero </br>
+                    eos et accusam et justo duo</br>
+                    dolores et ea rebum. Stet clita kasd gubergren,</br>
+                    no sea takimata sanctus est Lorem Ipsum</br>
+                    dolor sit amet.
+            </p>
+            <a href="https://www.facebook.com"><img class="Social-Media" src="Images/icon_facebook.png" alt="Facebook-Icons"></a>
+    </div>
+    <div class="Content">
+        <h3>Kontakt</h3>
+            <input type="text" placeholder="Vorname"><br>
+            <input type="text" placeholder="Nachname"><br>
+            <input type="text" placeholder="E-Mail"><br>
+            <textarea placeholder="Nachricht"></textarea><br>
+            <p style="color: rgb(204, 204, 204);">Mit Absenden der Nachricht besätigen ich<br> den <u>Datenschutz</u></p>
+            <form action="mailto:" method="POST" autocomplete="off">
+                <input type="submit" name="action" value="absenden">
+            </form>
+    </div>
+</body>
+</html>
