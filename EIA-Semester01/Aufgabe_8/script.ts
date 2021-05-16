@@ -35,7 +35,7 @@ function Music(): void {
     if (mediaPlayer.classList.contains("passive")) {
         mediaPlayer.classList.replace("passive", "active");
         document.querySelector(".playPause").classList.replace("fa-play", "fa-pause");
-        interval = setInterval(Loop, 1500);
+        interval = setInterval(Loop, 300);
     }
 
     else {
@@ -46,10 +46,8 @@ function Music(): void {
 }
 
 function Loop(): void {
-    while (n < playThis.length) {
-        playSample(playThis[n]);
-        n++;
-    }
+    playSample(playThis[n]);
+    n++;
     if (n == playThis.length) {
         n = 0;
     }
