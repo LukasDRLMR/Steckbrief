@@ -11,7 +11,7 @@ var record = false;
 var playThis = ["Sounds/assets_1.mp3", "Sounds/assets_2.mp3", "Sounds/assets_3.mp3", "Sounds/assets_4.mp3", "Sounds/assets_5.mp3", "Sounds/assets_6.mp3", "Sounds/assets_7.mp3"];
 var samples = ["Sounds/assets_1.mp3", "Sounds/assets_2.mp3", "Sounds/assets_3.mp3", "Sounds/assets_4.mp3", "Sounds/assets_5.mp3", "Sounds/assets_6.mp3", "Sounds/assets_7.mp3", "Sounds/assets_8.mp3", "Sounds/assets_9.mp3"];
 //Auswahl aller Buttons + Verbindung zur Sounddatei & Abspiel-Funktion
-for (var i = 0; i < pads.length; i++) {
+for (i = 0; i < pads.length; i++) {
     pads[i].addEventListener("click", function (event) {
         var pos = event.target.classList[1];
         var num = pos.substring(pos.length - 1, pos.length);

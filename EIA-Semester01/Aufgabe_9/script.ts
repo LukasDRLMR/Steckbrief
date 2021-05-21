@@ -1,27 +1,25 @@
 //Variablen
 const tasks: HTMLElement = document.querySelector("#Tasks");
 
-const check: HTMLElement = document.createElement("i");
-check.className = "far fa-circle";
-
-const trash: HTMLElement = document.createElement("i");
-trash.className = "far fa-trash-alt";
-
 const undone: HTMLElement = document.querySelector(".fa-circle");
 const done: HTMLElement = document.querySelector(".fa-check-circle");
 
-var li: HTMLElement = document.createElement("li");
 var inputTask: HTMLInputElement = document.querySelector("#Input");
 
 //add Tasks
 document.querySelector(".fa-plus-circle").addEventListener("click", addTask);
-document.querySelector("#Input").addEventListener("keydown", function (e: Event) {
-    if (e.keyCode == 13) {
+document.querySelector("#Input").addEventListener("keydown", function (e: KeyboardEvent): void {
+    if (e.key == "Enter") {
         addTask();
     }
 });
 
 function addTask(): void {
+    let li: HTMLElement = document.createElement("li");
+    const trash: HTMLElement = document.createElement("i");
+    trash.className = "far fa-trash-alt";
+    const check: HTMLElement = document.createElement("i");
+    check.className = "far fa-circle";
 
     if (inputTask.value == "") {
         alert("Please write something");
@@ -33,7 +31,7 @@ function addTask(): void {
         li.appendChild(check);
         setTimeout(function (): void {
             inputTask.value = "";
-        }, 200);
+        },         200);
         Todos();
         activate();
     }

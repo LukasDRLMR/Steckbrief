@@ -1,21 +1,21 @@
 //Variablen
 var tasks = document.querySelector("#Tasks");
-var check = document.createElement("i");
-check.className = "far fa-circle";
-var trash = document.createElement("i");
-trash.className = "far fa-trash-alt";
 var undone = document.querySelector(".fa-circle");
 var done = document.querySelector(".fa-check-circle");
-var li = document.createElement("li");
 var inputTask = document.querySelector("#Input");
 //add Tasks
 document.querySelector(".fa-plus-circle").addEventListener("click", addTask);
 document.querySelector("#Input").addEventListener("keydown", function (e) {
-    if (e.keyCode == 13) {
+    if (e.key == "Enter") {
         addTask();
     }
 });
 function addTask() {
+    var li = document.createElement("li");
+    var trash = document.createElement("i");
+    trash.className = "far fa-trash-alt";
+    var check = document.createElement("i");
+    check.className = "far fa-circle";
     if (inputTask.value == "") {
         alert("Please write something");
     }

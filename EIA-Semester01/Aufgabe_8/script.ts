@@ -4,17 +4,17 @@ var mediaPlayer: HTMLElement = document.querySelector(".play-button");
 var shuffleButton: HTMLElement = document.querySelector(".fa-random");
 var deleteButton: HTMLElement = document.querySelector(".fa-backspace");
 var recordButton: HTMLElement = document.querySelector(".fa-microphone");
-var interval: any;
+var interval: number;
 var n: number = 0;
 var shuffleBeat: any;
 var record: boolean = false;
-var playThis: any = ["Sounds/assets_1.mp3", "Sounds/assets_2.mp3", "Sounds/assets_3.mp3", "Sounds/assets_4.mp3", "Sounds/assets_5.mp3", "Sounds/assets_6.mp3", "Sounds/assets_7.mp3"];
+var playThis: string[] = ["Sounds/assets_1.mp3", "Sounds/assets_2.mp3", "Sounds/assets_3.mp3", "Sounds/assets_4.mp3", "Sounds/assets_5.mp3", "Sounds/assets_6.mp3", "Sounds/assets_7.mp3"];
 var samples: any[] = ["Sounds/assets_1.mp3", "Sounds/assets_2.mp3", "Sounds/assets_3.mp3", "Sounds/assets_4.mp3", "Sounds/assets_5.mp3", "Sounds/assets_6.mp3", "Sounds/assets_7.mp3", "Sounds/assets_8.mp3", "Sounds/assets_9.mp3"];
 
 //Auswahl aller Buttons + Verbindung zur Sounddatei & Abspiel-Funktion
-for (var i = 0; i < pads.length; i++) {
-    pads[i].addEventListener("click", function (event: MouseEvent) {
-        var pos: string = event.target.classList[1];
+for (i = 0; i < pads.length; i++) {
+    pads[i].addEventListener("click", function (event: MouseEvent): void {
+        var pos: string = (event.target as HTMLElement).classList[1];
         var num: string = pos.substring(pos.length - 1, pos.length);
         playSample(samples[num]);
     });
